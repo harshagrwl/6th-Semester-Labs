@@ -1,4 +1,4 @@
-# 6th Semester
+# 6th Semester Labs
 This repository consists of Lab Programs and assignments completed in 6th semester of NIT Surathkal.
 ## Contents
 - Data Analytics (DA)
