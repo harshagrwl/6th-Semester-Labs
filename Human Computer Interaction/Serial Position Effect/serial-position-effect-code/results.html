@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Serial Position Effect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="index.css">
+    <script defer src="render.js"></script>
+</head>
+
+<body>
+    <h style="font-weight: bold; font-size: large;">Results and Analysis</h>
+    <p>
+        The score is calculated based on the number of number of Animals which you were able to remember correctly. The analysis also considers the <b>Serial-Position Effect</b> which is the tendency of a person to recall the first and last items in a series best, and the middle items worst.
+    </p>
+    <br>
+    <p>
+        Click below to display your Score.
+    </p>
+    <button class="button is-primary" onclick="calculateScore()">Score</button>
+    <p id="analysis"></p>
+    <br>
+    <p> Click below to restart the simulation</p>
+    <button id="startBtn" class="button is-primary"><a href="index.html">Restart</a></button>
+</body>
+</html>
