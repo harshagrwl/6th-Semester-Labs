@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body>
+  <div class="qfc-container">
+    <h2>Forest Tree Census</h2>
+    <p><b><u>HCI Assignment : Harsh Agarwal (181IT117)</b></u></p>
+    <form>
+      <div>
+      	<div>
+            <input type="button" onclick="getLocation();" value="Location"/>
+        </div>
+        <p id="demo"></p>
+        <div>
+          <label for="Tree">Forest Cover</label>
+            <select name="Tree" id="Tree">
+              <option value="Deciduous">Select</option>
+              <option value="Deciduous">Deciduous</option>
+              <option value="Evergreen">Evergreen </option>
+              <option value="Temprate">Temprate</option>
+              <option value="Mangrove">Mangrove</option>
+              <option value="Mangrove">Coniferous</option>
+              <option value="Mangrove">Tundra</option>
+            </select>
+        </div>
+        
+        <div>
+          Measurement Unit : <br><br><input type="radio" name="editList" value="always">cm
+          <input type="radio" name="editList" value="never">m
+        </div>
+        <div>
+            <input placeholder="Height" type="text" required>
+        </div>
+        <div>
+            <input placeholder="Girth" type="text" required>
+        </div>
+        <div>
+            <input placeholder="Canopy" type="text" required>
+        </div>
+        <div>
+            <input placeholder="Flowering Season" type="text" required>
+        </div>
+        <div>
+            <input placeholder="Fruiting Season" type="text" required>
+        </div>
+        <br><br><br>
+
+        <div>
+            <input placeholder="Name of the Inspecting Officer" type="text" required>
+        </div>
+        <div>
+           Date : <input placeholder="DD-MM-YYYY" type="Date" required>
+        </div>
+        <div>
+           Time : <input placeholder="Time" type="Time" required>
+        </div>
+        
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+<style>
+  a {
+    color :#00bcd4;
+    text-decoration: none;
+  }
+</style>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</html>
